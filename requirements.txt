@@ -1,4 +1,5 @@
 requests
+keras==2.10.0
 streamlit-aggrid
 pandas
 jinja2==3.0.3
