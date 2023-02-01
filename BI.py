@@ -485,10 +485,9 @@ def pdftocsv():
 								st.write(df_temp)
 								csv = df_temp.to_csv(index=False)
 								b64 = base64.b64encode(csv.encode()).decode()
-								if st.button("Scarica Tabella numero " + str(j)):
-									st.markdown('### ** ⬇️ Scarica la tabella in formato csv **')
-									href = f'<a href="data:file/csv;base64,{b64}" download="PDF_table{str(j)}.csv">** Clicca Qui per Scaricare il Tuo Dataset! 🎉**</a>'
-									st.markdown(href, unsafe_allow_html=True)
+								st.markdown('### ** ⬇️ Scarica la tabella in formato csv **')
+								href = f'<a href="data:file/csv;base64,{b64}" download="PDF_table{str(j)}.csv">** Clicca Qui per Scaricare il Tuo Dataset! 🎉**</a>'
+								st.markdown(href, unsafe_allow_html=True)
 	
 					except ValueError:
 						pass
